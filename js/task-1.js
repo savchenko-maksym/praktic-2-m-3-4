@@ -6,8 +6,17 @@
 // використовуючи Object.keys() і for...of
 
 const user = {
-  name: 'John',
+  name: "John",
   age: 20,
-  hobby: 'tennis',
+  hobby: "tennis",
   premium: true,
+};
+
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
+
+const arr = Object.keys(user);
+for (const element of arr) {
+  console.log(`${element}:${user[element]}`);
 }
